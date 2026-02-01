@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine Proposal 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        .no {
+            background-color: #aaa;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Hi Pirru ❤️</h1>
+
+    <p>How are you? I know you must be fine.</p>
+
+    <p>Kya hum tumko surprise de?</p>
+    <button class="yes" onclick="nextStep()">Yes</button>
+    <button class="no" disabled>No</button>
+
+    <div id="question2" style="display:none;">
+        <p>Will you be my Valentine? 💖</p>
+        <button class="yes" onclick="sayYes()">Yes</button>
+        <button class="no" disabled>No</button>
+    </div>
+
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+    function nextStep() {
+        document.getElementById("question2").style.display = "block";
+    }
+
+    function sayYes() {
+        document.getElementById("result").innerHTML =
+            "Yay! 💕 I knew it! Happy Valentine’s Day, Pihu 💖🌹";
+    }
+</script>
+
+</body>
+</html>
